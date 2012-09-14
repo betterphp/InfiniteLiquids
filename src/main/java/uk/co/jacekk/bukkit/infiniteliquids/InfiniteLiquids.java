@@ -1,15 +1,13 @@
 package uk.co.jacekk.bukkit.infiniteliquids;
 
-import org.bukkit.plugin.java.JavaPlugin;
+import uk.co.jacekk.bukkit.baseplugin.v2.BasePlugin;
 
-public class InfiniteLiquids extends JavaPlugin {
-	
-	protected InfiniteLiquidsLogger log;
+public class InfiniteLiquids extends BasePlugin {
 	
 	public void onEnable(){
-		this.log = new InfiniteLiquidsLogger(this);
+		super.onEnable(false);
 		
-		this.getServer().getPluginManager().registerEvents(new InfiniteLiquidsPlayerListener(), this);
+		this.pluginManager.registerEvents(new BucketListener(this), this);
 	}
 	
 }

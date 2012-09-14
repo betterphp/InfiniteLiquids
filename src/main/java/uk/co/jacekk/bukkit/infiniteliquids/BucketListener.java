@@ -5,16 +5,19 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
-import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerBucketFillEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class InfiniteLiquidsPlayerListener implements Listener {
+import uk.co.jacekk.bukkit.baseplugin.v2.event.BaseListener;
+
+public class BucketListener extends BaseListener<InfiniteLiquids> {
 	
-	@EventHandler(priority = EventPriority.HIGH)
+	public BucketListener(InfiniteLiquids plugin){
+		super(plugin);
+	}
+	
+	@EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
 	public void onPlayerBucketFill(PlayerBucketFillEvent event){
-		if (event.isCancelled()) return;
-		
 		Player player = event.getPlayer();
 		Block block = event.getBlockClicked();
 		Material blockType = block.getType();
