@@ -1,4 +1,4 @@
-package uk.co.jacekk.bukkit.InfiniteLiquids;
+package uk.co.jacekk.bukkit.infiniteliquids;
 
 import org.bukkit.Material;
 import org.bukkit.block.Block;

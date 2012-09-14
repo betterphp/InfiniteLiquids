@@ -1,4 +1,4 @@
-package uk.co.jacekk.bukkit.InfiniteLiquids;
+package uk.co.jacekk.bukkit.infiniteliquids;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
