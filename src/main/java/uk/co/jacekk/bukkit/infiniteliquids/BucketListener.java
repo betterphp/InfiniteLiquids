@@ -26,10 +26,12 @@ public class BucketListener extends BaseListener<InfiniteLiquids> {
 			event.setCancelled(true);
 			
 			player.setItemInHand(new ItemStack(Material.WATER_BUCKET, 1));
+			player.sendBlockChange(block.getLocation(), blockType, block.getData());
 		}else if (blockType == Material.STATIONARY_LAVA){
 			event.setCancelled(true);
 			
 			player.setItemInHand(new ItemStack(Material.LAVA_BUCKET, 1));
+			player.sendBlockChange(block.getLocation(), blockType, block.getData());
 		}
 	}
 	
