@@ -1,6 +1,6 @@
 package uk.co.jacekk.bukkit.infiniteliquids;
 
-import uk.co.jacekk.bukkit.baseplugin.v2.BasePlugin;
+import uk.co.jacekk.bukkit.baseplugin.v5.BasePlugin;
 
 public class InfiniteLiquids extends BasePlugin {
 	
